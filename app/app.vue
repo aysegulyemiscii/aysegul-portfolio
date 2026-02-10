@@ -8,8 +8,6 @@ useHead({
         "PHP/Laravel ile kurumsal projelerde full stack geliştirme deneyimi. API entegrasyonları, performans/SEO iyileştirmeleri ve canlıya çıkış süreçleri. Go öğreniyor, sırada .NET.",
     },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
-
-    // Open Graph
     { property: "og:type", content: "website" },
     { property: "og:title", content: "Ayşe Gül YEMİŞCİ | Portfolio" },
     {
@@ -31,7 +29,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "SITE_URL_BURAYA",
+      href: "https://aysegul-portfolio.vercel.app/",
     },
   ],
   script: [
@@ -42,7 +40,7 @@ useHead({
         "@type": "Person",
         name: "Ayşe Gül YEMİŞCİ",
         jobTitle: "Backend-focused Full Stack Developer",
-        url: "SITE_URL_BURAYA",
+        url: "https://aysegul-portfolio.vercel.app/",
         sameAs: [
           "https://www.linkedin.com/in/aysegul-yemisci/",
           "https://github.com/aysegulyemiscii",

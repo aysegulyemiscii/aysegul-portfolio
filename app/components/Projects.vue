@@ -23,16 +23,15 @@ const projects: Project[] = [
     desc_en: "A Laravel app that simulates a league based on match results and points.",
     tags: ["Laravel", "PHP"],
     repoUrl: "https://github.com/aysegulyemiscii/league-simulator",
-    // liveUrl: "https://..." // varsa ekle
+    // liveUrl: "https://..."
   },
   {
     title: "Portfolio (Nuxt 3 + Tailwind)",
     desc_tr: "Nuxt 3 ve Tailwind ile geliştirilmiş tek sayfa portföy sitesi.",
     desc_en: "Single-page portfolio website built with Nuxt 3 and Tailwind.",
     tags: ["Nuxt", "Tailwind"],
-    repoUrl: "https://github.com/aysegulyemiscii/aysegul-portfolio", // repo adını değiştirirsen burayı da değiştir
-    // liveUrl: "https://..." // deploy edince ekle
-  },
+    repoUrl: "https://github.com/aysegulyemiscii/aysegul-portfolio",
+    liveUrl: "https://aysegul-portfolio.vercel.app/" 
   {
     title: "Go CLI Notes (WIP)",
     desc_tr: "CLI üzerinden not ekleme/listeleme/tamamlama. JSON dosya kullanımı.",
@@ -41,7 +40,7 @@ const projects: Project[] = [
     wip: true,
     next_tr: "Sırada: testler ve paketleme.",
     next_en: "Next: tests and packaging.",
-    // repoUrl: "https://github.com/..." // hazır olunca ekle
+    // repoUrl: "https://github.com/..."
   },
   {
     title: "Go Todo API (WIP)",
@@ -51,7 +50,7 @@ const projects: Project[] = [
     wip: true,
     next_tr: "Sırada: veritabanı, auth ve Docker.",
     next_en: "Next: database, auth, and Docker.",
-    // repoUrl: "https://github.com/..." // hazır olunca ekle
+    // repoUrl: "https://github.com/..."
   },
 ]
 

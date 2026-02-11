@@ -7,9 +7,12 @@ useHead({
       content:
         "PHP/Laravel ile kurumsal projelerde full stack geliştirme deneyimi. API entegrasyonları, performans/SEO iyileştirmeleri ve canlıya çıkış süreçleri. Go öğreniyor, sırada .NET.",
     },
+  
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { property: "og:type", content: "website" },
     { property: "og:title", content: "Ayşe Gül YEMİŞCİ | Portfolio" },
+    { property: "og:url", content: "https://aysegul-portfolio.vercel.app/" },
+    { name: "robots", content: "index, follow" },
     {
       property: "og:description",
       content:
@@ -18,7 +21,7 @@ useHead({
     { property: "og:locale", content: "tr_TR" },
 
     // Twitter
-    { name: "twitter:card", content: "summary" },
+    { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "Ayşe Gül YEMİŞCİ | Portfolio" },
     {
       name: "twitter:description",

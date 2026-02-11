@@ -19,11 +19,11 @@ type Project = {
 const projects: Project[] = [
   {
     title: "League Simulator (Laravel)",
-    desc_tr: "Takım puanları ve maç sonuçları üzerinden lig simülasyonu yapan Laravel uygulaması.",
+    desc_tr:
+      "Takım puanları ve maç sonuçları üzerinden lig simülasyonu yapan Laravel uygulaması.",
     desc_en: "A Laravel app that simulates a league based on match results and points.",
     tags: ["Laravel", "PHP"],
     repoUrl: "https://github.com/aysegulyemiscii/league-simulator",
-    // liveUrl: "https://..."
   },
   {
     title: "Portfolio (Nuxt 3 + Tailwind)",
@@ -31,16 +31,16 @@ const projects: Project[] = [
     desc_en: "Single-page portfolio website built with Nuxt 3 and Tailwind.",
     tags: ["Nuxt", "Tailwind"],
     repoUrl: "https://github.com/aysegulyemiscii/aysegul-portfolio",
-    liveUrl: "https://aysegul-portfolio.vercel.app/" 
+    liveUrl: "https://aysegul-portfolio.vercel.app/",
+  },
   {
     title: "Go CLI Notes (WIP)",
     desc_tr: "CLI üzerinden not ekleme/listeleme/tamamlama. JSON dosya kullanımı.",
     desc_en: "CLI app to add/list/complete notes. JSON file storage.",
     tags: ["Go", "CLI"],
     wip: true,
-    next_tr: "Sırada: testler ve paketleme.",
-    next_en: "Next: tests and packaging.",
-    // repoUrl: "https://github.com/..."
+    next_tr: "testler ve paketleme.",
+    next_en: "tests and packaging.",
   },
   {
     title: "Go Todo API (WIP)",
@@ -48,9 +48,8 @@ const projects: Project[] = [
     desc_en: "REST API with CRUD endpoints.",
     tags: ["Go", "REST"],
     wip: true,
-    next_tr: "Sırada: veritabanı, auth ve Docker.",
-    next_en: "Next: database, auth, and Docker.",
-    // repoUrl: "https://github.com/..."
+    next_tr: "veritabanı, auth ve Docker.",
+    next_en: "database, auth, and Docker.",
   },
 ]
 
@@ -79,34 +78,30 @@ function hasAnyLink(p: Project) {
       <div
         v-for="p in projects"
         :key="p.title"
-        class="rounded-2xl border border-slate-200 p-5"
-        :class="p.wip ? 'bg-white' : 'bg-white hover:bg-slate-50 transition'"
+        class="rounded-2xl border border-slate-200 p-5 bg-white"
+        :class="p.wip ? '' : 'hover:bg-slate-50 transition'"
       >
         <div class="flex items-start justify-between gap-3">
           <h3 class="font-semibold">{{ p.title }}</h3>
 
-          <span
-            v-if="!p.wip && hasAnyLink(p)"
-            class="text-slate-300"
-            aria-hidden="true"
-          >
+          <span v-if="!p.wip && hasAnyLink(p)" class="text-slate-300" aria-hidden="true">
             ↗
           </span>
         </div>
 
-        <p class="mt-2 text-sm text-slate-600">
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">
           {{ isEn ? p.desc_en : p.desc_tr }}
         </p>
 
         <p
           v-if="p.wip && (p.next_tr || p.next_en)"
-          class="mt-2 text-sm text-slate-500"
+          class="mt-2 text-sm text-slate-500 leading-relaxed"
         >
           <span class="font-medium text-slate-600">{{ t.next }}</span>
           {{ isEn ? p.next_en : p.next_tr }}
         </p>
 
-        <div class="mt-4 flex flex-wrap gap-2">
+        <div class="mt-3 flex flex-wrap gap-2">
           <span
             v-for="tag in p.tags"
             :key="tag"
@@ -123,8 +118,11 @@ function hasAnyLink(p: Project) {
           </span>
         </div>
 
-        <!-- Links row -->
-        <div v-if="hasAnyLink(p)" class="mt-4 flex flex-wrap gap-3 text-sm">
+        <!-- Links row (footer-like) -->
+        <div
+          v-if="hasAnyLink(p)"
+          class="mt-5 border-t border-slate-100 pt-4 flex items-center gap-4 text-sm"
+        >
           <a
             v-if="p.repoUrl"
             :href="p.repoUrl"

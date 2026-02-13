@@ -34,6 +34,7 @@ useHead({
       rel: "canonical",
       href: "https://aysegul-portfolio.vercel.app/",
     },
+      { rel: "icon", type: "image/svg+xml", href: "/logo.svg" },
   ],
   script: [
     {
